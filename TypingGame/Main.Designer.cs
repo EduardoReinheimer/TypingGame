@@ -39,7 +39,7 @@ namespace TypingGame
             // lblRight
             // 
             this.lblRight.AutoSize = true;
-            this.lblRight.Location = new System.Drawing.Point(25, 36);
+            this.lblRight.Location = new System.Drawing.Point(12, 9);
             this.lblRight.Name = "lblRight";
             this.lblRight.Size = new System.Drawing.Size(53, 13);
             this.lblRight.TabIndex = 0;
@@ -48,7 +48,7 @@ namespace TypingGame
             // lblWrong
             // 
             this.lblWrong.AutoSize = true;
-            this.lblWrong.Location = new System.Drawing.Point(588, 36);
+            this.lblWrong.Location = new System.Drawing.Point(71, 9);
             this.lblWrong.Name = "lblWrong";
             this.lblWrong.Size = new System.Drawing.Size(61, 13);
             this.lblWrong.TabIndex = 1;
@@ -57,10 +57,10 @@ namespace TypingGame
             // lblWord
             // 
             this.lblWord.AutoSize = true;
-            this.lblWord.Font = new System.Drawing.Font("Microsoft Tai Le", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblWord.Location = new System.Drawing.Point(276, 81);
+            this.lblWord.Font = new System.Drawing.Font("Microsoft Tai Le", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblWord.Location = new System.Drawing.Point(6, 37);
             this.lblWord.Name = "lblWord";
-            this.lblWord.Size = new System.Drawing.Size(122, 49);
+            this.lblWord.Size = new System.Drawing.Size(61, 23);
             this.lblWord.TabIndex = 2;
             this.lblWord.Text = "Word";
             this.lblWord.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
@@ -68,18 +68,18 @@ namespace TypingGame
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(236, 263);
+            this.label4.Location = new System.Drawing.Point(13, 135);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(193, 13);
+            this.label4.Size = new System.Drawing.Size(104, 13);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Press Enter to Check the text with word";
+            this.label4.Text = "Press Space to Start";
             // 
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Microsoft Tai Le", 28F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(28, 182);
+            this.textBox1.Location = new System.Drawing.Point(10, 63);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(621, 55);
+            this.textBox1.Size = new System.Drawing.Size(800, 55);
             this.textBox1.TabIndex = 4;
             this.textBox1.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.textBox1.KeyUp += new System.Windows.Forms.KeyEventHandler(this.checkGame);
@@ -88,7 +88,7 @@ namespace TypingGame
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(712, 299);
+            this.ClientSize = new System.Drawing.Size(822, 164);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.lblWord);

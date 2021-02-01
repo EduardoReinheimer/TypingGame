@@ -12,20 +12,7 @@ namespace TypingGame
 {
     public partial class Main : Form
     {
-
-        string[] phrases = {"quero cafeh, isso aqui tah uma porcaria que nao tem merda nenhuma.",
-                            "vai todo mundo pra casa do caraleo.",
-                            "Foi otimo.",
-                            "Essa novinha keh pressaum."
-
-        };
-        Random rnd = new Random();
-        int correct = 0;
-        int incorrect = 0;
-        int index;
-        string currentPhrase = "";
-        List<string> words = new List<string> { };
-
+        Game game;
 
         public Main()
         {
@@ -33,44 +20,34 @@ namespace TypingGame
             NewGame();
         }
 
-        public string GetPhrase()
-        {
-            string phrase = phrases[rnd.Next(0, phrases.Length)];
-            return phrase;
-        }
-
         public void NewGame()
         {
-            index = 0;
-            currentPhrase = GetPhrase();
-            words = currentPhrase.Split(' ').ToList();
-            lblWord.Text = currentPhrase;
+            game = new Game();
+            lblWord.Text = game.GetPhrase();
         }
 
         
         private void checkGame(object sender, KeyEventArgs e)
         {
-            int indexEnd = words.Count() - 1;
             if (e.KeyCode == Keys.Space)
             {
-                if (textBox1.Text.Trim() == words[index])
+                if (textBox1.Text.Trim() == game.GetWord())
                 {
-                    correct++;
+                    
                     textBox1.Clear();
-                    if (index < indexEnd)
-                    {
-                        index++;
-                    } else
+                    game.IsCorrect();
+                    game.NextWord();
+                    if (game.PhraseEnded)
                     {
                         NewGame();
                     }
                 }
                 else
                 {
-                    incorrect++;
+                    game.IsIncorrect();
                 }
-                lblRight.Text = $"Correct: {correct}";
-                lblWrong.Text = $"Incorrect: {incorrect}";
+                lblRight.Text = $"Correct: {game.Correct}";
+                lblWrong.Text = $"Incorrect: {game.Incorrect}";
             }
         }
     }
